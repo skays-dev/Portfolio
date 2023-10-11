@@ -1,0 +1,55 @@
+      <section className="hero relative 2xl:max-w-screen-2xl lg:max-w-screen-lg xl:max-w-screen-xl mx-auto my-16">
+        <div className=" grid px-4 py-20 justify-items-center mx-auto gap-8 lg:grid-cols-12">
+          <div className="place-self-center lg:col-span-7">
+            <h4 className="max-w-2xl mb-4 text-xl font-normal tracking-tight">
+              Lorem Ipsum is simply dummy
+            </h4>
+            <h1 className="max-w-2xl mb-4 text-5xl font-semibold tracking-tight leading-none">
+              Hi, Im Aymane Taoufyq
+              <br />
+              I’m <span>Developer Full Stack</span>
+            </h1>
+
+            <p className="max-w-2xl mb-6 font-normal text-xl ">
+              Lorem ipsum dolor sit amet consectetur. In ac dolor
+              Accumsan tempus in diam ipsum nibh velit Lorem ipsum dolor sit amet consectetur. In ac dolor
+              Accumsan tempus in diam ipsum nibh velit.
+            </p>
+
+            <div className="card flex gap-5">
+              <div className="card-details text-center">
+                <h4 className='mt-4 mx-9 font-medium text-base '>Project success</h4>
+                <h1 className='mt-2 font-semibold text-5xl'>500+</h1>
+              </div>
+
+              <div className="card-details text-center">
+                <h4 className='mt-4 mx-9 font-medium text-base'>Project success</h4>
+                <h1 className='mt-2 font-semibold text-5xl'>500+</h1>
+              </div>
+            </div>
+
+          </div>
+          <div className="lg:mt-0 lg:col-span-5 lg:flex w-full h-full ">
+            <Image width={525} height={452} src="http://localhost:3000/assets/imgs/pages/homePage/hero.png" alt="mockup" />
+            
+          </div>
+        </div>
+        
+        <div className='absolute xs:bottom-10 bottom-[-3rem] w-full flex justify-center items-center'>
+          <Link href='#about'>
+            <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+              <motion.div
+                animate={{
+                  y: [0, 24, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className='w-3 h-3 rounded-full bg-secondary mb-1'
+              />
+            </div>
+          </Link>
+        </div>
+      </section>

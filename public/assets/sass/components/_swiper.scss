@@ -1,0 +1,28 @@
+.card-project{
+    background-color: $color-background-1;
+}
+
+.swiper-wrapper{
+    .swiper-slide{
+        h4{
+            transition: .2s color ease-in;
+        }
+        
+        &:hover h4{
+            color: $color-secondary;
+        }
+    }
+    .primary-secondary-gradient {
+        background: hsla(254, 83%, 66%, 1);
+
+        background: linear-gradient(135deg, hsla(254, 83%, 66%, 1) 27%, hsla(254, 42%, 39%, 1) 92%);
+        
+        background: -moz-linear-gradient(135deg, hsla(254, 83%, 66%, 1) 27%, hsla(254, 42%, 39%, 1) 92%);
+        
+        background: -webkit-linear-gradient(135deg, hsla(254, 83%, 66%, 1) 27%, hsla(254, 42%, 39%, 1) 92%);
+        .item {
+            background-color: $color-background-1;
+        }
+    }
+}
+

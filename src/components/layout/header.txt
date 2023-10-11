@@ -1,0 +1,114 @@
+<header className="header 2xl:max-w-screen-2xl lg:max-w-screen-lg xl:max-w-screen-xl mt-6 mx-auto rounded-full py-3 px-8">
+            <div className=" mx-auto">
+                <div className="flex items-center justify-between relative">
+                    <div className="flex items-center">
+                        <div className="header-logo">
+                            <Link href="#" className="block">
+                                <Image src="http://localhost:3000/assets/imgs/template/icons/logo.png" alt="logo" width={60} height={60} />
+                            </Link>
+                        </div>
+
+                        <div className="header-nav inline-block text-left w-full pl-8 text-lg">
+                            <nav className="nav-main-menu w-auto p-0 float-none">
+                                <ul className="pt-1">
+                                    <li className="float-left relative text-left p-3">
+                                        <Link href="#" className="active">Home</Link>
+                                    </li>
+                                    <li className="float-left relative text-left p-3">
+                                        <Link href="#">About</Link>
+                                    </li>
+                                    <li className="float-left relative text-left p-3">
+                                        <Link href="#">Skills</Link>
+                                    </li>
+                                    <li className="float-left relative text-left p-3">
+                                        <Link href="#">Projects</Link>
+                                    </li>
+                                    <li className="float-left relative text-left p-3">
+                                        <Link href="#">Blog</Link>
+                                    </li>
+                                    <li className="float-left relative text-left p-3">
+                                        <Link href="#">Contact Us</Link>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div className="header-right flex">
+                        <Link href='https://www.google.com' target="_blank" className=" text-center py-4 px-8 rounded-full">Download CV</Link>
+                        
+
+                        {/* <label htmlFor="burger" className="burger">
+                            <input id="burger" type="checkbox"/>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label> */}
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+
+
+
+---------------------
+         <section className="hero relative">
+        <div className="container flex flex-col px-8 py-40 justify-center mx-auto lg:flex-row lg:justify-between">
+          <div className="place-self-center">
+            <h4 className="max-w-2xl mb-4 text-xl font-normal tracking-tight">
+              Lorem Ipsum is simply dummy
+            </h4>
+            <h1 className="max-w-2xl mb-4 text-5xl font-semibold tracking-tight leading-none">
+              Hi, Im Aymane Taoufyq
+              <br />
+              I’m <span>Developer Full Stack</span>
+            </h1>
+
+            <p className="max-w-2xl mb-14 font-normal text-xl ">
+              Lorem ipsum dolor sit amet consectetur. In ac dolor
+              Accumsan tempus in diam ipsum nibh velit Lorem ipsum dolor sit amet consectetur. In ac dolor
+              Accumsan tempus in diam ipsum nibh velit.
+            </p>
+
+            <div className="card flex gap-5">
+              <div className="card-details text-center">
+                <h4 className='mt-4 mx-9 font-medium text-base '>Project success</h4>
+                <h1 className='mt-2 font-semibold text-5xl'>500+</h1>
+              </div>
+
+              <div className="card-details text-center">
+                <h4 className='mt-4 mx-9 font-medium text-base'>Project success</h4>
+                <h1 className='mt-2 font-semibold text-5xl'>500+</h1>
+              </div>
+            </div>
+
+          </div>
+          <div className="lg:mt-0 lg:flex w-[700px] h-[400px]">
+            {/* <Image width={525} height={452} src="http://localhost:3000/assets/imgs/pages/homePage/hero.png" alt="mockup" /> */}
+            <ComputersCanvas />
+          </div>
+        </div>
+        
+        <div className='absolute xs:bottom-10 bottom-[1rem] w-full flex justify-center items-center'>
+          <Link href='#about'>
+            <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+              <motion.div
+                animate={{
+                  y: [0, 24, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className='w-3 h-3 rounded-full bg-secondary mb-1'
+              />
+            </div>
+          </Link>
+        </div>
+      </section>

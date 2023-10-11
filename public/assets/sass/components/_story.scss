@@ -1,0 +1,31 @@
+
+
+.verticalTimeLineItem{
+    h3 {
+        transition: .2s all ease-in-out;
+    }
+    p {
+        transition: .2s all ease-in-out;
+    }
+    .vertical-timeline-element-content {
+        transition: .2s all ease-in-out;
+    }
+    .verticalTimeLineItem-date {
+        transition: .2s all ease-in-out;
+    }
+    &:hover{
+        h3 {
+            color: $color-secondary;
+        }
+        p {
+            color: $color-secondary;
+        }
+        .vertical-timeline-element-content {
+            -webkit-box-shadow: 0 3px 0 $color-secondary;
+            box-shadow: 0 3px 0 $color-secondary;
+        }
+        .verticalTimeLineItem-date {
+            color: $color-secondary;
+        }
+    }
+}

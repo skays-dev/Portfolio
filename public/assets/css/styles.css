@@ -1,0 +1,323 @@
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  --line-color: #fff;
+}
+
+body {
+  background-color: #18122B;
+}
+
+.bg-round {
+  background-color: #fff;
+}
+
+.color-primary {
+  color: #18122B;
+}
+
+.color-secondary {
+  color: #8362F0;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-content-1 {
+  color: #E8E8E8;
+}
+
+.color-content-2 {
+  color: #BABABA;
+}
+
+.color-content-3 {
+  color: #767676;
+}
+
+.color-content-4 {
+  color: #F5FAFE;
+}
+
+.color-icons {
+  color: #4D4D4D;
+}
+
+.color-border {
+  color: #313131;
+}
+
+.color-background-1 {
+  background: #1C1C1C;
+}
+
+.color-background-2 {
+  background: #1A1A1A;
+}
+
+.color-info {
+  color: #16B1FF;
+}
+
+.color-success {
+  color: #56CA00;
+}
+
+.color-warning {
+  color: #FFB400;
+}
+
+.color-error {
+  color: #FF4C51;
+}
+
+.hash-span {
+  margin-top: -250px;
+  padding-bottom: 250px;
+  display: block;
+}
+
+.header-icon {
+  color: #fff;
+  transition: 0.2s all;
+  width: 48px;
+  height: 48px;
+}
+.header-icon:hover {
+  color: #8362F0;
+  cursor: pointer;
+}
+.header-icon:active {
+  color: #2A1F4C;
+  width: 44px;
+  height: 44px;
+}
+
+.normal-link {
+  color: #fff;
+  transition: 0.2s all;
+}
+.normal-link:hover {
+  color: #8362F0;
+}
+
+.link {
+  color: #E8E8E8;
+  transition: 0.2s;
+  position: relative;
+  text-decoration: none;
+}
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #8362F0;
+  bottom: -4px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.link:hover {
+  color: #8362F0;
+}
+
+.active {
+  color: #8362F0;
+  cursor: default;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #8362F0;
+  bottom: -4px;
+  left: 0;
+  transform: scaleX(1);
+}
+
+.btn {
+  background-color: #8362F0;
+  color: #E8E8E8;
+  transition: 0.2s ease-in-out;
+}
+.btn:hover {
+  background-color: #5B44A8;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: #8362F0 1px solid;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #8362F0;
+  border: #8362F0 1px solid;
+}
+
+.read-more {
+  color: #fff;
+  transition: all 0.2s;
+}
+.read-more svg {
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s;
+  margin-left: 0.125rem;
+}
+.read-more:hover {
+  fill: #8362F0;
+  color: #8362F0;
+}
+.read-more:hover svg {
+  transform: rotate(-45deg);
+  margin-left: 0.25rem;
+}
+
+.card-project {
+  background-color: #1C1C1C;
+}
+
+.swiper-wrapper .swiper-slide h4 {
+  transition: 0.2s color ease-in;
+}
+.swiper-wrapper .swiper-slide:hover h4 {
+  color: #8362F0;
+}
+.swiper-wrapper .primary-secondary-gradient {
+  background: hsl(254, 83%, 66%);
+  background: linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+  background: -moz-linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+  background: -webkit-linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+}
+.swiper-wrapper .primary-secondary-gradient .item {
+  background-color: #1C1C1C;
+}
+
+.verticalTimeLineItem h3 {
+  transition: 0.2s all ease-in-out;
+}
+.verticalTimeLineItem p {
+  transition: 0.2s all ease-in-out;
+}
+.verticalTimeLineItem .vertical-timeline-element-content {
+  transition: 0.2s all ease-in-out;
+}
+.verticalTimeLineItem .verticalTimeLineItem-date {
+  transition: 0.2s all ease-in-out;
+}
+.verticalTimeLineItem:hover h3 {
+  color: #8362F0;
+}
+.verticalTimeLineItem:hover p {
+  color: #8362F0;
+}
+.verticalTimeLineItem:hover .vertical-timeline-element-content {
+  -webkit-box-shadow: 0 3px 0 #8362F0;
+  box-shadow: 0 3px 0 #8362F0;
+}
+.verticalTimeLineItem:hover .verticalTimeLineItem-date {
+  color: #8362F0;
+}
+
+.section-hero::before {
+  content: "";
+  position: fixed;
+  background-image: url(../imgs/template/hero.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.section-skills::before {
+  content: "";
+  position: fixed;
+  background-image: url(../imgs/template/skills.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.section-hero .card-details {
+  position: relative;
+}
+.section-hero .card-details::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #8362F0;
+  top: 0px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(1);
+}
+.section-hero .card-details h4 {
+  color: #fff;
+}
+
+.section-about .w-158 {
+  width: 635px;
+}
+
+.section-skills .skills-item {
+  position: relative;
+}
+.section-skills .skills-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-services .primary-secondary-gradient {
+  background: hsl(254, 83%, 66%);
+  background: linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+  background: -moz-linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+  background: -webkit-linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+}
+.section-services .primary-secondary-gradient .service-item {
+  background-color: #1C1C1C;
+}
+
+.section-contact .primary-secondary-gradient {
+  background: hsl(254, 83%, 66%);
+  background: linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+  background: -moz-linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+  background: -webkit-linear-gradient(135deg, hsl(254, 83%, 66%) 27%, hsl(254, 42%, 39%) 92%);
+}
+.section-contact .primary-secondary-gradient .item {
+  background-color: #1C1C1C;
+}
+
+.header {
+  border: 2px solid #fff;
+}
+@media (max-width: 1280px) {
+  .header {
+    border: none !important;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
