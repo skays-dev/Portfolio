@@ -7,12 +7,12 @@ module.exports = {
     images: {
         remotePatterns: [
             {
-                protocol: 'http',
-                hostname: 'localhost',
-                port: '3000',
+                protocol: ['http', 'https'],
+                hostname: ['localhost', 'main--whimsical-tarsier-5985be.netlify.app'],
+                port: '*',
                 pathname: '/**',
             },
         ],
-        domain: ['localhost']
+        domain: ['localhost', 'main--whimsical-tarsier-5985be.netlify.app']
     },
 }
