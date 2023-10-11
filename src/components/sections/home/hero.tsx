@@ -11,14 +11,18 @@ const Hero: FC = (): JSX.Element => {
     const Keywords = useRef(null);
 
     useEffect(() => {
-        const typed = new Typed(Keywords.current, {
-            strings: ["Aymane Taoufyq", "Developer Full Stack", "Greatest Of All Time"],
-            startDelay: 100,
-            typeSpeed: 80,
-            backSpeed: 40,
-            backDelay: 80,
-            loop: true
-        });
+        let typed: any;
+        if (Keywords.current) {
+            typed = new Typed(Keywords.current, {
+                strings: ["Aymane Taoufyq", "Developer Full Stack", "Greatest Of All Time"],
+                startDelay: 100,
+                typeSpeed: 80,
+                backSpeed: 40,
+                backDelay: 80,
+                loop: true
+            });
+        }
+
 
         return () => {
             typed.destroy();
