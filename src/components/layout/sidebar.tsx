@@ -67,7 +67,7 @@ const SideBar: FC<SideBarProps> = ({ handleOpen }): JSX.Element => {
                         </div>
                     </div>
                 </motion.div>
-                <div className="sidebar-menu container mx-auto flex flex-col gap-2 overflow-y-auto overflow-x-auto justify-start min-h-full flex-1">
+                <div className="sidebar-menu mx-auto flex flex-col gap-2 overflow-y-auto justify-start min-h-full flex-1">
                     <nav className="nav-main-menu w-auto float-none mt-4">
                         <ul className="flex flex-col">
                             <motion.li
