@@ -1,39 +1,191 @@
 'use client'
+import dynamic from 'next/dynamic'
+import Aos from 'aos';
+import { useEffect } from 'react';
 
-import Image from 'next/image'
-import { motion } from "framer-motion";
-import Link from 'next/link';
-import Hero from '@/components/sections/home/hero';
-import About from '@/components/sections/home/about';
-import Skills from '@/components/sections/home/skills';
-import Services from '@/components/sections/home/services';
-import Story from '@/components/sections/home/story';
-import Projects from '@/components/sections/home/projects';
-import Contact from '@/components/sections/home/contact';
-import Blog from '@/components/sections/home/blog';
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import Hero from "../components/hero/Hero";
+import AboutMain from "../components/about";
+import Wrapper from "../components/layout/wrapper";
+import SEO from "../components/Seo";
+import Portfolio from "../components/portfolio/Portfolio";
+import Address from "../components/Address";
+import Social from "../components/Social";
+import Contact from "../components/Contact";
+import Blog from "../components/blog/Blog";
+import SwitchDark from "../components/switch/SwitchDark";
 
 
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+  ssr: false
+});
 
+const menuItem = [
+  { icon: "fa-home", menuName: "Home" },
+  { icon: "fa-user", menuName: "About" },
+  { icon: "fa-briefcase", menuName: "Portfolio" },
+  { icon: "fa-envelope-open", menuName: "Contact" },
+];
 
-export default function Home() {
+const Home = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  }, []);
+
   return (
     <>
-      <div className="hero"></div>
-      <Hero />
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={44}
+        color="255, 160, 1"
+        outerAlpha={0.3}
+        innerScale={0.7}
+        outerScale={1.2}
+      />
+      <Wrapper>
+        <SEO pageTitle={"Home Dark"} />
 
-      <About />
+        <div className="yellow">
+          <SwitchDark />
+          {/* End Switcher */}
+          <Tabs>
+            <div className="header">
+              <TabList className=" icon-menu  revealator-slideup revealator-once revealator-delay1">
+                {menuItem.map((item, i) => (
+                  <Tab className="icon-box" key={i}>
+                    <i className={`fa ${item.icon}`}></i>
+                    <h2>{item.menuName}</h2>
+                  </Tab>
+                ))}
+              </TabList>
+            </div>
+            {/* End Menu Content */}
 
-      <Skills />
+            <div className="tab-panel_list">
+              {/* Hero Content Starts */}
+              <TabPanel className="home ">
+                <div
+                  className="container-fluid main-container container-home p-0 g-0"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
+                  <div className="color-block d-none d-lg-block"></div>
+                  <Hero />
+                </div>
+              </TabPanel>
+              {/* Hero Content Ends */}
 
-      <Services />
+              {/* About Content Starts */}
+              <TabPanel className="about">
+                <div data-aos="fade-up" data-aos-duration="1200">
+                  <div className="title-section text-start text-sm-center">
+                    <h1>
+                      ABOUT <span>ME</span>
+                    </h1>
+                    <span className="title-bg">Resume</span>
+                  </div>
+                  {/* End title */}
+                  <AboutMain />
+                </div>
+              </TabPanel>
+              {/* About Content Ends */}
 
-      <Story />
+              {/* Portfolio Content Starts */}
+              <TabPanel className="portfolio professional">
+                <div
+                  className="title-section text-start text-sm-center"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
+                  <h1>
+                    my <span>portfolio</span>
+                  </h1>
+                  <span className="title-bg">works</span>
+                </div>
+                {/* End title */}
+                <Portfolio />
+              </TabPanel>
+              {/* Portfolio Content Ends */}
 
-      <Projects />
+              {/* Contact Content Starts */}
+              <TabPanel className="contact">
+                <div
+                  className="title-section text-start text-sm-center"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
+                  <h1>
+                    get in <span>touch</span>
+                  </h1>
+                  <span className="title-bg">contact</span>
+                </div>
+                <div
+                  className="container"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
+                  <div className="row">
+                    {/*  Left Side Starts */}
+                    <div className="col-12 col-lg-4">
+                      <h3 className="text-uppercase custom-title mb-0 ft-wt-600 pb-3">
+                        {"Don't"} be shy !
+                      </h3>
+                      <p className="open-sans-font mb-4">
+                        Feel free to get in touch with me. I am always open to
+                        discussing new projects, creative ideas or opportunities
+                        to be part of your visions.
+                      </p>
+                      <Address />
+                      {/* End Address */}
 
-      <Contact />
+                      <Social />
+                      {/* End Social */}
+                    </div>
+                    {/* Left Side Ends */}
 
-      <Blog />
+                    {/*  Contact Form Starts  */}
+                    <div className="col-12 col-lg-8">
+                      <Contact />
+                    </div>
+                    {/*  Contact Form Ends */}
+                  </div>
+                </div>
+                {/* End .container */}
+              </TabPanel>
+              {/* Contact Content Ends */}
+
+              {/* Blog Content Starts */}
+              {/* <TabPanel className="blog">
+              <div
+                className="title-section text-start text-sm-center "
+                data-aos="fade-up"
+                data-aos-duration="1200"
+              >
+                <h1>
+                  my <span>blog</span>
+                </h1>
+                <span className="title-bg">posts</span>
+              </div>
+              <div
+                className="container"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+              >
+                <div className="row pb-50">
+                  <Blog />
+                </div>
+              </div>
+            </TabPanel> */}
+              {/* Blog Content Ends */}
+            </div>
+          </Tabs>
+        </div>
+      </Wrapper>
     </>
   )
 }
+
+
+export default Home;

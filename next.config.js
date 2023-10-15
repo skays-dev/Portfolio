@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = {
-    transpilePackages: ['three'],
-    nextConfig,
+const nextConfig = {
     images: {
-        domains: ['localhost', 'main--whimsical-tarsier-5985be.netlify.app']
-    },
-}
+    remotePatterns: [
+        {
+            protocol: 'https',
+            hostname: 'media.graphassets.com',
+            port: '',
+            pathname: '/**',
+        },
+    ],
+},}
+
+module.exports = nextConfig

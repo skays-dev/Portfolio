@@ -30,6 +30,6 @@ Here are a few selected projects I've worked on:
 
 - **Email:** <skays.dev@gmail.com>
 - **LinkedIn:** <https://www.linkedin.com/in/aymane-taoufyq-4a91ab277/>
-- **GitHub:** <https://github.com/skays-dev>
+- **Facebook:** <https://www.facebook.com/skays.dev>
 
 Feel free to get in touch if you have any questions, would like to collaborate, or just want to chat about web development!
