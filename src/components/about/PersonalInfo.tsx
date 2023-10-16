@@ -9,7 +9,7 @@ const personalInfoContent = [
   { meta: "Freelance", metaInfo: "Available", hasColor: "green" },
   { meta: "Address", metaInfo: "Sale", hasColor: "" },
   { meta: "phone", metaInfo: "+212 659295575", hasColor: "", link: "tel: +212659295575" },
-  { meta: "Email", metaInfo: "skays.dev@gmail.com", hasColor: "", link: "mailto: skays.dev@gmail.com" },
+  { meta: "Email", metaInfo: "taoufyq.ayman@gmail.com", hasColor: "", link: "mailto:taoufyq.ayman@gmail.com" },
   { meta: "Linkedin", metaInfo: " Aymane Taoufyq", hasColor: "", link: "https://www.linkedin.com/in/aymane-taoufyq-4a91ab277/" },
   { meta: "Github", metaInfo: " skays-dev", hasColor: "", link: "https://github.com/skays-dev" },
   { meta: "langages", metaInfo: "English, Arabic, French", hasColor: "" },
