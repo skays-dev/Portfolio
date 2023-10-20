@@ -4,7 +4,7 @@ import { FC } from "react";
 const personalInfoContent = [
   { meta: "first name", metaInfo: "Aymane", hasColor: "" },
   { meta: "last name", metaInfo: "Taoufyq", hasColor: "" },
-  { meta: "Age", metaInfo: "2 Years", hasColor: "" },
+  { meta: "Age", metaInfo: "19", hasColor: "" },
   { meta: "Nationality", metaInfo: "Morocco", hasColor: "" },
   { meta: "Freelance", metaInfo: "Available", hasColor: "green" },
   { meta: "Address", metaInfo: "Sale", hasColor: "" },
