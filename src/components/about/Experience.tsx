@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import { FC } from "react";
 
 const experienceContent = [
   {
@@ -11,7 +11,7 @@ const experienceContent = [
   },
 ];
 
-const Experience = () => {
+const Experience: FC = (): JSX.Element => {
   return (
     <ul>
       {experienceContent.map((val, i) => (

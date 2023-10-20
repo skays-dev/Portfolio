@@ -25,7 +25,7 @@ import { submitSendEmail } from "@/services/client";
 const validationSchema: Yup.ObjectSchema<ValidationSchema> = Validation;
 
 
-const Contact = () => {
+const Contact: FC = (): JSX.Element => {
   // Error and Success for Form Clients
   const [error, setError] = useState<boolean>(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);

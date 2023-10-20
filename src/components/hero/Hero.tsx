@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import Modal from "react-modal";
 import heroImgMobile from "../../../public/assets/img/hero/img-mobile.jpg";
 import cancelImg from "../../../public/assets/img/cancel.svg";
@@ -14,7 +14,7 @@ const heroContent = {
   heroBtn: "more about me",
 };
 
-const Hero = () => {
+const Hero: FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   function toggleModalOne() {
     setIsOpen(!isOpen);

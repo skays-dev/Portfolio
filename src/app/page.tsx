@@ -1,7 +1,7 @@
 'use client'
 import dynamic from 'next/dynamic'
 import Aos from 'aos';
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Hero from "../components/hero/Hero";
@@ -11,7 +11,6 @@ import Portfolio from "../components/portfolio/Portfolio";
 import Address from "../components/Address";
 import Social from "../components/Social";
 import Contact from "../components/Contact";
-import Blog from "../components/blog/Blog";
 import SwitchDark from "../components/switch/SwitchDark";
 
 
@@ -26,7 +25,7 @@ const menuItem = [
   { icon: "fa-envelope-open", menuName: "Contact" },
 ];
 
-const Home = () => {
+const Home: FC = (): JSX.Element => {
   useEffect(() => {
     Aos.init({
       duration: 1200,

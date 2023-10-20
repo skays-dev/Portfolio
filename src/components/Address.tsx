@@ -1,6 +1,6 @@
-import React from "react";
+import { FC } from "react";
 
-const Address = () => {
+const Address: FC = (): JSX.Element => {
   return (
     <>
       <p className="open-sans-font custom-span-contact position-relative">

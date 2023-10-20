@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, FC } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import PortfolioData from "./portfolioData";
 import Image from "next/image";
 import ModalMain from "./modal/ModalMain";
 import { getProjects } from "@/services/projects";
 
-const Portfolio = () => {
+const Portfolio: FC = (): JSX.Element => {
   const [getModal, setGetModal] = useState(false);
   const [modalId, setModalId] = useState(1);
   const [slug, setSlug] = useState("");
   // States Of Data Fetch it
-  const [allProjects, setAllProjects] = useState();
+  const [allProjects, setAllProjects] = useState<any[]>([]);
 
-  const handleModal = (id, slug) => {
+  const handleModal = (id: number, slug: string): void => {
     setGetModal(true);
     setModalId(id);
     setSlug(slug);
@@ -93,7 +92,7 @@ const Portfolio = () => {
 
                 {allProjects.map((item) => {
                   const { categories } = item.node;
-                  const frontEndCategories = categories.filter(category => category.slug === "front-end");
+                  const frontEndCategories = categories.filter((category: any) => category.slug === "front-end");
 
                   if (frontEndCategories.length > 0) {
                     let delayAnimation = -100;
@@ -135,7 +134,7 @@ const Portfolio = () => {
 
                 {allProjects.map((item) => {
                   const { categories } = item.node;
-                  const frontEndCategories = categories.filter(category => category.slug === "back-end");
+                  const frontEndCategories = categories.filter((category: any) => category.slug === "back-end");
 
                   if (frontEndCategories.length > 0) {
                     let delayAnimation = -100;
@@ -177,7 +176,7 @@ const Portfolio = () => {
 
                 {allProjects.map((item) => {
                   const { categories } = item.node;
-                  const frontEndCategories = categories.filter(category => category.slug === "ui-ux");
+                  const frontEndCategories = categories.filter((category: any) => category.slug === "ui-ux");
 
                   if (frontEndCategories.length > 0) {
                     let delayAnimation = -100;
@@ -219,7 +218,7 @@ const Portfolio = () => {
 
                 {allProjects.map((item) => {
                   const { categories } = item.node;
-                  const frontEndCategories = categories.filter(category => category.slug === "alx");
+                  const frontEndCategories = categories.filter((category: any) => category.slug === "alx");
 
                   if (frontEndCategories.length > 0) {
                     let delayAnimation = -100;

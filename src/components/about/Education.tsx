@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import { FC } from "react";
 
 const educationContent = [
   {
@@ -23,7 +23,7 @@ const educationContent = [
   },
 ];
 
-const Education = () => {
+const Education: FC = (): JSX.Element => {
   return (
     <ul>
       {educationContent.map((val, i) => (

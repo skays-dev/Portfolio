@@ -1,12 +1,12 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import lightImage from "../../../public/assets/img/sun.png";
 import handleSwitchValue from "@/utils/theme";
 
-const SwitchDark = () => {
+const SwitchDark: FC = (): JSX.Element => {
   const [isDark, setIsDark] = useState(false);
 
-  const handleLabelClick = () => {
+  const handleLabelClick = (): void => {
     if (isDark) {
       handleSwitchValue(true)
       setIsDark(false);

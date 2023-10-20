@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import { FC } from "react";
 
 const personalInfoContent = [
   { meta: "first name", metaInfo: "Aymane", hasColor: "" },
@@ -15,7 +15,7 @@ const personalInfoContent = [
   { meta: "langages", metaInfo: "English, Arabic, French", hasColor: "" },
 ];
 
-const PersonalInfo = () => {
+const PersonalInfo: FC = (): JSX.Element => {
   return (
     <ul className="about-list list-unstyled open-sans-font">
       {personalInfoContent.map((val, i) => (

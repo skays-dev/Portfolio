@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 const skillsContent = [
   { skillClass: "p60", skillPercent: "60", skillName: "C" },
@@ -18,7 +18,7 @@ const skillsContent = [
   { skillClass: "p100", skillPercent: "100", skillName: "GIT/GITHUB/GITLAB" },
 ];
 
-const Skills = () => {
+const Skills: FC = (): JSX.Element => {
   return (
     <>
       {skillsContent.map((val, i) => (

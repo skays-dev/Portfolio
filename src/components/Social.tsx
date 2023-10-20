@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 const SocialShare = [
   {
@@ -13,7 +13,7 @@ const SocialShare = [
   { iconName: "fa fa-github", link: "https://github.com/skays-dev" },
 ];
 
-const Social = () => {
+const Social: FC = (): JSX.Element => {
   return (
     <ul className="social list-unstyled pt-1 mb-5">
       {SocialShare.map((val, i) => (

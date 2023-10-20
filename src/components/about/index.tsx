@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import Achievements from "./Achievements";
 import Education from "./Education";
 import Experience from "./Experience";
@@ -8,7 +8,7 @@ import cv from "../../../public/assets/img/cv.webp";
 import heroImgMobile from "../../../public/assets/img/hero/img-mobile.jpg";
 import Image from "next/image";
 
-const index = () => {
+const index: FC = (): JSX.Element => {
   return (
     <section className="main-content ">
       <div className="container">

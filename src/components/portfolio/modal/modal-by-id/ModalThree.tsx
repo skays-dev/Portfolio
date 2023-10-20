@@ -1,20 +1,17 @@
 // external
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // internal
 import CloseImg from "../../../../../public/assets/img/cancel.svg";
-import PortfolioData from '../../portfolioData';
-import img1 from "../../../../../public/assets/img/portfolio/project-1.jpg";
-import img2 from "../../../../../public/assets/img/portfolio/project-2.jpg";
 import { getProjects } from '@/services/projects';
 import formatDateFromDatabase from '@/helpers/formatDate';
 
-const ModalThree = ({ modalId, setGetModal, slug }) => {
+const ModalThree: FC<{ modalId: any, setGetModal: any, slug: string }> = ({ modalId, setGetModal, slug }) => {
   console.log('ModalThree clicked')
-  const [allProjects, setAllProjects] = useState();
+  const [allProjects, setAllProjects] = useState<any[]>([]);
 
   useEffect(() => {
     // we create a function for fetch the data and set it in useState and call it @fetchRecentBlogs

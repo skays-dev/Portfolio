@@ -1,11 +1,11 @@
-import React from "react";
+import { FC } from "react";
 
 const achievementsContent = [
   { title: "2", subTitle1: "years of", subTitle2: "experience" },
   { title: "6", subTitle1: "completed", subTitle2: "projects" },
 ];
 
-const Achievements = () => {
+const Achievements: FC = (): JSX.Element => {
   return (
     <div className="row">
       {achievementsContent.map((val, i) => (

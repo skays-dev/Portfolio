@@ -1,13 +1,12 @@
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import CloseImg from "../../../../../public/assets/img/cancel.svg";
-import PortfolioData from '../../portfolioData';
 import { getProjects } from '@/services/projects';
 import formatDateFromDatabase from '@/helpers/formatDate';
 
-const ModalTwo = ({ modalId, setGetModal, slug }) => {
+const ModalTwo: FC<{ modalId: any, setGetModal: any, slug: string }> = ({ modalId, setGetModal, slug }) => {
   console.log('ModalTwo clicked')
-  const [allProjects, setAllProjects] = useState();
+  const [allProjects, setAllProjects] = useState<any[]>([]);
 
   useEffect(() => {
     // we create a function for fetch the data and set it in useState and call it @fetchRecentBlogs
