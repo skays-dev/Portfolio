@@ -7,7 +7,6 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Hero from "../components/hero/Hero";
 import AboutMain from "../components/about";
 import Wrapper from "../components/layout/wrapper";
-import SEO from "../components/Seo";
 import Portfolio from "../components/portfolio/Portfolio";
 import Address from "../components/Address";
 import Social from "../components/Social";
@@ -39,13 +38,12 @@ const Home = () => {
       <AnimatedCursor
         innerSize={8}
         outerSize={44}
-        color="255, 160, 1"
+        color="122, 42, 202"
         outerAlpha={0.3}
         innerScale={0.7}
         outerScale={1.2}
       />
       <Wrapper>
-        <SEO pageTitle={"Home Dark"} />
 
         <div className="yellow">
           <SwitchDark />

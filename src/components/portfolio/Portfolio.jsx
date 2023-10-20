@@ -55,11 +55,12 @@ const Portfolio = () => {
 
             <div className="container">
               <TabPanel>
-                <div className="tab-container">
-                  {allProjects.map((item) => {
-                    let delayAnimation = -100;
-                    const { slug, image, typeProject, typeCard } = item.node;
-                    return (
+
+                {allProjects ? allProjects.map((item) => {
+                  let delayAnimation = -100;
+                  const { slug, image, typeProject, typeCard } = item.node;
+                  return (
+                    <div className="tab-container">
                       <div
                         key={slug}
                         data-aos="fade-right"
@@ -75,22 +76,73 @@ const Portfolio = () => {
                           </h3>
                         </div>
                       </div>
+                    </div>
+                  );
+                }) :
+                  <div
+                    data-aos="fade-right"
+                    data-aos-delay='100'
+                  >
+                    <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                  </div>
+                }
+
+              </TabPanel>
+
+              <TabPanel>
+
+                {allProjects.map((item) => {
+                  const { categories } = item.node;
+                  const frontEndCategories = categories.filter(category => category.slug === "front-end");
+
+                  if (frontEndCategories.length > 0) {
+                    let delayAnimation = -100;
+                    const { slug, image, typeProject, typeCard } = item.node;
+
+                    return (
+                      <div className="tab-container">
+                        <div
+                          key={slug}
+                          data-aos="fade-right"
+                          data-aos-delay={delayAnimation + 100}
+                        >
+                          <div
+                            className="tab-content"
+                            onClick={() => handleModal(typeCard, slug)}
+                          >
+                            <Image src={image.url} alt="portfolio project demo" width={895} height={552} />
+                            <h3>
+                              <span className="content-title">{typeProject}</span>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
                     );
-                  })}
-                </div>
+                  }
+                  return (
+                    <div
+                      data-aos="fade-right"
+                      data-aos-delay='100'
+                    >
+                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                    </div>
+                  );
+                })}
+
               </TabPanel>
 
               <TabPanel>
-                <div className="tab-container">
-                  {allProjects.map((item) => {
-                    const { categories } = item.node;
-                    const frontEndCategories = categories.filter(category => category.slug === "front-end");
 
-                    if (frontEndCategories.length > 0) {
-                      let delayAnimation = -100;
-                      const { slug, image, typeProject, typeCard } = item.node;
+                {allProjects.map((item) => {
+                  const { categories } = item.node;
+                  const frontEndCategories = categories.filter(category => category.slug === "back-end");
 
-                      return (
+                  if (frontEndCategories.length > 0) {
+                    let delayAnimation = -100;
+                    const { slug, image, typeProject, typeCard } = item.node;
+
+                    return (
+                      <div className="tab-container">
                         <div
                           key={slug}
                           data-aos="fade-right"
@@ -106,24 +158,33 @@ const Portfolio = () => {
                             </h3>
                           </div>
                         </div>
-                      );
-                    }
-                    return null;
-                  })}
-                </div>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div
+                      data-aos="fade-right"
+                      data-aos-delay='100'
+                    >
+                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                    </div>
+                  );
+                })}
+
               </TabPanel>
 
               <TabPanel>
-                <div className="tab-container">
-                  {allProjects.map((item) => {
-                    const { categories } = item.node;
-                    const frontEndCategories = categories.filter(category => category.slug === "back-end");
 
-                    if (frontEndCategories.length > 0) {
-                      let delayAnimation = -100;
-                      const { slug, image, typeProject, typeCard } = item.node;
+                {allProjects.map((item) => {
+                  const { categories } = item.node;
+                  const frontEndCategories = categories.filter(category => category.slug === "ui-ux");
 
-                      return (
+                  if (frontEndCategories.length > 0) {
+                    let delayAnimation = -100;
+                    const { slug, image, typeProject, typeCard } = item.node;
+
+                    return (
+                      <div className="tab-container">
                         <div
                           key={slug}
                           data-aos="fade-right"
@@ -139,24 +200,33 @@ const Portfolio = () => {
                             </h3>
                           </div>
                         </div>
-                      );
-                    }
-                    return null;
-                  })}
-                </div>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div
+                      data-aos="fade-right"
+                      data-aos-delay='100'
+                    >
+                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                    </div>
+                  );
+                })}
+
               </TabPanel>
 
               <TabPanel>
-                <div className="tab-container">
-                  {allProjects.map((item) => {
-                    const { categories } = item.node;
-                    const frontEndCategories = categories.filter(category => category.slug === "ui-ux");
 
-                    if (frontEndCategories.length > 0) {
-                      let delayAnimation = -100;
-                      const { slug, image, typeProject, typeCard } = item.node;
+                {allProjects.map((item) => {
+                  const { categories } = item.node;
+                  const frontEndCategories = categories.filter(category => category.slug === "alx");
 
-                      return (
+                  if (frontEndCategories.length > 0) {
+                    let delayAnimation = -100;
+                    const { slug, image, typeProject, typeCard } = item.node;
+
+                    return (
+                      <div className="tab-container">
                         <div
                           key={slug}
                           data-aos="fade-right"
@@ -172,44 +242,19 @@ const Portfolio = () => {
                             </h3>
                           </div>
                         </div>
-                      );
-                    }
-                    return null;
-                  })}
-                </div>
-              </TabPanel>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div
+                      data-aos="fade-right"
+                      data-aos-delay='100'
+                    >
+                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                    </div>
+                  );
+                })}
 
-              <TabPanel>
-                <div className="tab-container">
-                  {allProjects.map((item) => {
-                    const { categories } = item.node;
-                    const frontEndCategories = categories.filter(category => category.slug === "alx");
-
-                    if (frontEndCategories.length > 0) {
-                      let delayAnimation = -100;
-                      const { slug, image, typeProject, typeCard } = item.node;
-
-                      return (
-                        <div
-                          key={slug}
-                          data-aos="fade-right"
-                          data-aos-delay={delayAnimation + 100}
-                        >
-                          <div
-                            className="tab-content"
-                            onClick={() => handleModal(typeCard, slug)}
-                          >
-                            <Image src={image.url} alt="portfolio project demo" width={895} height={552} />
-                            <h3>
-                              <span className="content-title">{typeProject}</span>
-                            </h3>
-                          </div>
-                        </div>
-                      );
-                    }
-                    return null;
-                  })}
-                </div>
               </TabPanel>
             </div>
           </Tabs>
