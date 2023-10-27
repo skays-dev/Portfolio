@@ -34,6 +34,7 @@ const Home: FC = (): JSX.Element => {
 
   return (
     <>
+
       <AnimatedCursor
         innerSize={8}
         outerSize={44}
@@ -45,6 +46,7 @@ const Home: FC = (): JSX.Element => {
       <Wrapper>
 
         <div className="yellow">
+        
           <SwitchDark />
           {/* End Switcher */}
           <Tabs>

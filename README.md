@@ -16,16 +16,6 @@ Here are some of the skills and technologies I'm proficient in:
 - **Version Control:** Git, GitHub, GitLab
 - **Deployment and Hosting:** Netlify, Vercel
 
-## Projects
-
-Here are a few selected projects I've worked on:
-
-### Project 1: [Project Name]
-
-- **Description:** Briefly describe the project and its purpose.
-- **Technologies Used:** List the technologies, languages, and frameworks used.
-- **Link:** Add a link to the live project (if available).
-
 ## Contact
 
 - **Email:** <skays.dev@gmail.com>

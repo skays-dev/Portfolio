@@ -68,7 +68,7 @@ const Portfolio: FC = (): JSX.Element => {
               <Tab>ALL</Tab>
               <Tab onClick={() => setCategory('front-end')}>Front end</Tab>
               <Tab onClick={() => setCategory('back-end')}>Back end</Tab>
-              <Tab onClick={() => setCategory('ui-ux')}>UI/UX</Tab>
+              {/* <Tab onClick={() => setCategory('ui-ux')}>UI/UX</Tab> */}
               <Tab onClick={() => setCategory('alx')}>ALX Tasks</Tab>
             </TabList>
 
@@ -102,7 +102,7 @@ const Portfolio: FC = (): JSX.Element => {
                       data-aos="fade-right"
                       data-aos-delay='100'
                     >
-                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                      <h1 style={{ textAlign: 'center' }}>loading...</h1>
                     </div>
                   }
                 </div>
@@ -137,7 +137,7 @@ const Portfolio: FC = (): JSX.Element => {
                       data-aos="fade-right"
                       data-aos-delay='100'
                     >
-                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                      <h1 style={{ textAlign: 'center' }}>loading...</h1>
                     </div>
                   }
                 </div>
@@ -172,12 +172,49 @@ const Portfolio: FC = (): JSX.Element => {
                       data-aos="fade-right"
                       data-aos-delay='100'
                     >
-                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                      <h1 style={{ textAlign: 'center' }}>loading...</h1>
                     </div>
                   }
                 </div>
 
               </TabPanel>
+
+             {/*  <TabPanel>
+
+                <div className="tab-container">
+                  {categoryProjects.length > 0 ? categoryProjects.map((item) => {
+                    const { slug, image, typeProject, typeCard } = item.node;
+                    let delayAnimation = -100;
+                    return (
+
+                      <div
+                        key={slug}
+                        data-aos="fade-right"
+                        data-aos-delay={delayAnimation + 100}
+                      >
+                        <div
+                          className="tab-content"
+                          onClick={() => handleModal(typeCard, slug)}
+                        >
+                          <Image src={image.url} alt="portfolio project demo" width={895} height={552} />
+                          <h3>
+                            <span className="content-title">{typeProject}</span>
+                          </h3>
+                        </div>
+                      </div>
+
+                    );
+                  }) :
+                    <div
+                      data-aos="fade-right"
+                      data-aos-delay='100'
+                    >
+                      <h1 style={{ textAlign: 'center' }}>loading...</h1>
+                    </div>
+                  }
+                </div>
+
+              </TabPanel> */}
 
               <TabPanel>
 
@@ -209,44 +246,7 @@ const Portfolio: FC = (): JSX.Element => {
                       data-aos="fade-right"
                       data-aos-delay='100'
                     >
-                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
-                    </div>
-                  }
-                </div>
-
-              </TabPanel>
-
-              <TabPanel>
-
-                <div className="tab-container">
-                  {categoryProjects.length > 0 ? categoryProjects.map((item) => {
-                    const { slug, image, typeProject, typeCard } = item.node;
-                    let delayAnimation = -100;
-                    return (
-
-                      <div
-                        key={slug}
-                        data-aos="fade-right"
-                        data-aos-delay={delayAnimation + 100}
-                      >
-                        <div
-                          className="tab-content"
-                          onClick={() => handleModal(typeCard, slug)}
-                        >
-                          <Image src={image.url} alt="portfolio project demo" width={895} height={552} />
-                          <h3>
-                            <span className="content-title">{typeProject}</span>
-                          </h3>
-                        </div>
-                      </div>
-
-                    );
-                  }) :
-                    <div
-                      data-aos="fade-right"
-                      data-aos-delay='100'
-                    >
-                      <h1 style={{ textAlign: 'center' }}>not Found</h1>
+                      <h1 style={{ textAlign: 'center' }}>loading...</h1>
                     </div>
                   }
                 </div>

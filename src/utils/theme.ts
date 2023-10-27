@@ -13,4 +13,3 @@ function handleSwitchValue(value: boolean) {
 }
 
 export default handleSwitchValue;
-
