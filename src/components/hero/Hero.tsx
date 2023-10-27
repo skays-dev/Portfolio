@@ -10,7 +10,7 @@ const heroContent = {
   heroMobileImage: heroImgMobile,
   heroTitleName: "Aymane Taoufyq",
   heroDesignation: "full stack developer",
-  heroDescriptions: `I'm Aymane Taoufyq, and I specialize in both front-end and back-end development. With 2 years of experience in the field, I've had the opportunity to work on a variety of exciting projects.`,
+  heroDescriptions: `I am Aymane Taoufyq, a Full Stack Developer with 2 years of experience. I specialize in both front-end and back-end development, creating and maintaining high-quality web applications. I am passionate about learning and staying updated with the latest technologies. I'm eager to contribute my skills to innovative projects and collaborate with dynamic teams.`,
   heroBtn: "more about me",
 };
 
