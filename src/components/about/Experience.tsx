@@ -14,6 +14,7 @@ const experienceContent = [
     position: " Java/Spring-Boot/Angular Developer",
     compnayName: "JobInTech",
     details: ``,
+    link: ""
   },
 ];
 
