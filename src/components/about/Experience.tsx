@@ -9,6 +9,12 @@ const experienceContent = [
     details: `Developing a website agency masterlys.ma with NextJs and GraphQL`,
     link: "https://masterlys.ma/"
   },
+  {
+    year: "December/2023 - Present",
+    position: " Java/Spring-Boot/Angular Developer",
+    compnayName: "JobInTech",
+    details: ``,
+  },
 ];
 
 const Experience: FC = (): JSX.Element => {
