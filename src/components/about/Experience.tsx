@@ -3,10 +3,10 @@ import { FC } from "react";
 
 const experienceContent = [
   {
-    year: "   2023",
+    year: "Mail/2023 - November/2023",
     position: " Web Developer",
     compnayName: "Masterlys",
-    details: `Thrived as a web development intern at Agency Masterlys, honing skills in front-end and back-end development during a 6-month internship. Actively contributed to website projects, fostering responsive and user-friendly designs.`,
+    details: `Developing a website agency masterlys.ma with NextJs and GraphQL`,
     link: "https://masterlys.ma/"
   },
 ];
